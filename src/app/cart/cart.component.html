@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-sm  sticky-top">
+  <div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <a class="nav-link" routerLink=""><h4>E-Shop</h4></a> 
+  </div>
+  <ul class="nav navbar-nav navbar-right">
+  <li class="nav-item">
+    <button type="button" (click)="logout()" class="btn btn-myedit" id="login">
+     Logout
+    </button>
+  </li> 
+</ul>
+</div>
+  </nav>
+  <div align="center">
+    <div class="card" align="left">
+      <div class="card-body">
+        <b>Cart</b>
+        <hr/>
+        <label *ngIf="!enable">Your Cart is Empty!</label>
+        <table *ngIf="enable"><tr><th>Product</th>
+        <th>Q</th>
+        <th>Price</th></tr>
+        <tr *ngFor="let x of product"><label hidden id="pid">{{x.id}}</label><td>{{x.name}}</td>
+        <td >{{x.quantity}}</td><td align="right">{{x.price}}</td></tr><tr>
+        <td><label><b>Total:</b></label><b><label style="color:red;">{{price}}</label></b></td></tr>
+        <tr><td><button class="btn btn-primary" (click)="clear()">Clear Cart</button></td></tr>
+        </table>
+        <hr/>
+        <div *ngIf="enable" style="padding-top: 10px">
+          <label>Select Payment Option</label>
+          <select class="form-control" (change)="paymentmethod($event)">
+          <option value="none">None</option>
+          <option value="paytm">Paytm</option>
+          <option value="paypal">PayPal</option>
+          <option value="card">Credit/Debit Card</option>
+        </select>
+        </div>
+        <div>
+        <table><tr><td *ngIf="enable"><input type="submit"  *ngIf="proceed" value="Proceed to Payment" (click)="payment()"class="btn btn-primary"/></td>
+        <td><button  (click)="home()" class="btn btn-primary">Go Back</button></td></tr></table>
+      </div>
+      </div>
+    </div>
+  </div>

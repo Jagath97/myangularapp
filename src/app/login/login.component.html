@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-sm  sticky-top">
+        <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+           <a class="nav-link" routerLink=""><h4>E-Shop</h4></a>  
+        </div>
+        </div>
+        </nav>
+
+<div align="center">
+    <label><b>User Login</b></label>
+<div class="card">
+<div class="card-body">
+    <form (submit)="login($event)">
+        <input type="email" class="form-control" placeholder="Email" id="email" required>
+        <span style="color:red;" hidden>Email is not valid!</span>
+        <input type="password" class="form-control" placeholder="Password" id="password" required>
+        <input type="submit" class="btn btn-primary">
+        <div><a routerLink="/signup">Need account? Signup Here!</a></div>
+    </form>
+
+</div>
+</div>
+</div>

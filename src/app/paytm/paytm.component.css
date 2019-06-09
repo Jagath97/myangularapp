@@ -1,0 +1,19 @@
+.card{
+    width: 400px;
+    background-color: #edf1f7;
+}
+input{
+    margin: 3px;
+}
+.btn{
+background-color: #7c7f84;
+border: #7c7f84;
+}
+.navbar{
+    background-color: #7c7f84;
+    border-bottom-color: #edf1f7;
+    color: white
+}
+.nav-link{
+    color: white;
+}

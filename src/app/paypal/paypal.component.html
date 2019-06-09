@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-sm  sticky-top">
+    <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+       <a class="nav-link" routerLink=""><h4>E-Shop</h4></a>  
+    </div>
+    </div>
+    </nav>
+  
+  <div align="center">
+  <label><b>Paypal</b></label>
+  <div class="card">
+  <div class="card-body">
+    <label>Enter your Paypal wallet details</label>
+  <form (submit)="orderpayment($event)">
+    <input type="email" class="form-control" placeholder="Email address" id="email" required>
+    <input type="password" class="form-control" placeholder="Password" id="password" required>
+    <div><label>Net Payable Amount:</label><label style="color:red"> Rs.{{total}}</label></div>
+    <input type="submit" class="btn btn-primary" value="Login to Pay">
+  </form>
+  
+  </div>
+  </div>
+  </div>
+  

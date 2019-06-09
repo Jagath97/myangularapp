@@ -1,0 +1,32 @@
+.card{
+    width: 400px;
+    background-color: #edf1f7;
+}
+input{
+    margin: 3px;
+}
+.btn{
+background-color: #7c7f84;
+border: #7c7f84;
+}
+
+
+.btn{
+	border:1px solid transparent;
+}
+.btn-normal-border{
+	border-color:white;
+}
+.btn-myedit:hover{
+	color:white;
+	border-color:white;
+}
+.btn-myedit{
+	border-color:white;
+	color:white;
+	margin-right:10px;
+}
+
+tr,td,th{
+    padding: 10px;
+}

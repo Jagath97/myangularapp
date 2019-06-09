@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-sm  sticky-top">
+    <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <h4>E-Shop</h4>
+    </div>
+      <ul class="nav navbar-nav navbar-right">
+      <li><label style="padding: 5px;"> {{user}}</label></li>
+      <li><button type="button" (click)="gotocart()" class="btn btn-myedit" id="cart">
+          Cart
+         </button></li> 
+
+      <li><button type="button" (click)="gotoorders()" class="btn btn-myedit" id="orders">
+          Orders
+         </button></li> 
+    <li>
+      <button type="button" (click)="login()" class="btn btn-myedit" id="login">
+       {{loginbutton}}
+      </button>
+    </li>
+     
+    </ul>
+    </div>
+    </nav>
+    <div class="container" ng-app="mySite" ng-controller="displayController">
+      <!--<label ><b>Choose Category</b></label>
+      <select class="form-control" style="width: 150px">
+          <option>All</option>
+          <option>Mobile</option>
+          <option>Electronics</option>
+          <option>Accesesories</option>
+      </select>
+      -->
+      <label ><b>Welcome to E-Shop</b></label>
+      <div class="row">
+          <div *ngFor="let x of allProducts" class="col-sm-3">
+                  <div class="card">
+                  <div class="card-body">
+                          <form (submit)="buyProduct($event)">   
+                          <table>
+                              <label hidden id="productid">{{x._id}}</label>
+                              <tr><th><label id="productname">{{x.name}}</label></th></tr>
+                              <tr><td><img src={{x.url}} class="image" alt={{x.name}}/></td></tr>
+                              <tr><td><h4 id="productprice" style="color: red;">{{x.price}}</h4></td></tr>
+                              <tr><th><input id="productquantity" class="form-control" type="number" value='1' style="width:50px;padding: 5px;"min='1' max="2"/></th></tr>
+                              <tr><td><input type="submit" value="Buy Now"class="btn btn-warning"/></td></tr>
+                          </table>
+                        </form>
+                  </div> 
+                  </div>
+          </div>
+      </div>
+  </div>

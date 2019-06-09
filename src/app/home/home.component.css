@@ -1,0 +1,27 @@
+.navbar{
+    background-color: #7c7f84;
+    border-bottom-color: #edf1f7;
+    color: white
+}
+.btn{
+	border:1px solid transparent;
+}
+.btn-normal-border{
+	border-color:white;
+}
+.btn-myedit:hover{
+	color:white;
+	border-color:white;
+}
+.btn-myedit{
+	border-color:white;
+	color:white;
+	margin-right:10px;
+}
+.container{
+	background-color: #edf1f7;
+	box-shadow: #7c7f84;
+}
+.image{
+	height:200px;
+}

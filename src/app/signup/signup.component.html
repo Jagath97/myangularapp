@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-sm  sticky-top">
+        <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="nav-link" routerLink=""><h4>E-Shop</h4></a> 
+        </div>
+        </div>
+        </nav>
+
+
+<div align="center">
+    <label><b>Signup Here</b></label>
+<div class="card">
+<div class="card-body">
+    <form (submit)=signup($event)>
+      <input type="text" class="form-control" placeholder="Name" id="name" required>
+        <input type="email" class="form-control" placeholder="Email" id="email"required>
+        <span style="color:red;" hidden>Email is not valid!</span>
+        <input type="password" class="form-control" placeholder="Password" id="password" required>
+        <input type="password" class="form-control" placeholder="Confirm Password" id="confirmpassword" required>
+        <input type="submit" class="btn btn-success">
+        <div><a routerLink="/login">Already a member? Login Here!</a></div>
+    </form>
+
+</div>
+</div>
+</div>

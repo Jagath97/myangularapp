@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-sm  sticky-top">
+    <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="nav-link" routerLink=""><h4>E-Shop</h4></a> 
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+    <li class="nav-item">
+      <button type="button" (click)="logout()" class="btn btn-myedit" id="login">
+       Logout
+      </button>
+    </li> 
+  </ul>
+  </div>
+    </nav>
+    <div align="center">
+      <div class="card" align="left">
+        <div class="card-body">
+          <b>Recent Orders:</b>
+          <hr/>
+          <div align="center">
+            <h4 *ngIf="!show">No Orders!</h4>
+            <a routerLink="" class="btn btn-myedit">Go Back</a>
+              <table *ngIf="show">
+                
+                <tr>
+                    <th><h4>Order Id</h4></th>
+                  <th colspan="2"><h4>Order</h4></th>
+                  <th colspan="2"><h4>Transaction Id</h4></th>
+                  <th colspan="2"><h4>Payment Mode</h4></th>
+                  <th colspan="2"><h4>Order Total</h4></th>
+                </tr>
+                <tr>
+                    <th><hr/></th>
+                  <th colspan="2"><hr/></th>
+                  <th colspan="2"><hr/></th>
+                  <th colspan="2"><hr/></th>
+                  <th colspan="2"><hr/></th>
+                </tr>
+                <tr *ngFor="let x of orders"><td>{{x._id}}</td>
+                  <td>{{x.product}}</td>
+                  <td><td>{{x.transactionid}}</td>
+                  <td><td>{{x.paymentmode}}</td>
+                  <td><td>{{x.totalprice}}</td>
+                </tr>
+                <tr>
+                  <th><hr/></th>
+                  <th colspan="2"><hr/></th>
+                  <th colspan="2"><hr/></th>
+                  <th colspan="2"><hr/></th>
+                  <th colspan="2"><hr/></th>
+                </tr>
+              </table>
+          </div>
+          </div>
+          </div>
+          </div>

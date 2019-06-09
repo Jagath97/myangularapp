@@ -1,0 +1,18 @@
+<div align="center">
+        <div class="card" align="left">
+          <div class="card-body">
+                <h2>Order Placed Successfully!</h2>
+            <div *ngFor="let x of finalresults">
+                <table>
+                        <tr><td><h4>Order Id:</h4></td><td>{{x._id}}</td></tr>
+                        <tr><td colspan="2"><h4>{{x.product}}</h4></td></tr>
+                        <tr><td><h4>Transaction Id:</h4></td><td>{{x.transactionid}}</td></tr>
+                        <tr><td><h4>Payment Mode:</h4></td><td>{{x.paymentmode}}</td></tr>
+                        <tr><td><h4>Order Total:</h4></td><td>{{x.totalprice}}</td></tr>
+                </table> 
+    
+            </div>
+            <a routerLink="" class="btn btn-myedit">Go Back</a>
+        </div>
+        </div>
+</div>
