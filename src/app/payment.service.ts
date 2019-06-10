@@ -37,6 +37,12 @@ export class PaymentService {
   getCardPayment(card,name,expiry,cvv,total){
     return this.http.post<orderpayment>('api/payment/card',{card,name,expiry,cvv,total})
   }
+  getUpiPayment(upi,total){
+    return this.http.post<orderpayment>('api/upi',{upi,total})
+  }
+  getNetBankingPayment(bank,account,password,total){
+    return this.http.post<orderpayment>('api/netbanking',{bank,account,password,total})
+  }
   placeOrder(){
     const transactionid=this.id
     const paymentmode=this.mode

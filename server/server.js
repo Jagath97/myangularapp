@@ -19,12 +19,63 @@ mongoose.Promise=Promise
 mongoose.connect("mongodb://localhost:27017/myproducts",{useNewUrlParser:true}).then(()=>console.log("Mongoose Connected!"));
 
 
-/*
-const p1=new Product({
-    _id:"two",name:"Nokia",url:"new_url",price:"50000"
+app.post('/api/addproducts',async (req,res)=>{
+    const {name,url,price}=req.body
+    const p1=new Product({
+        name,
+        url,
+        price
+    })
+    p1.save().then(()=>{
+        console.log("Product Added!")
+        res.json({
+            result:true,
+            data:"Product Added!"
+        })
+    })
 })
-p1.save().then(()=>console.log("added a collection"))
-*/
+const Upi=require('./model/upi')
+app.post('/api/upi',async(req,res)=>{
+    const user=req.session.user
+    const {upi,total}=req.body;
+    const newpayment=new Upi({
+        user,
+        upi,
+        total
+    })
+    await newpayment.save().then((data)=>{
+        if(data){
+            res.json({
+                result:true,
+                mode:"UPI",
+                data:data
+            })
+        }
+    })
+})
+
+const Net=require('./model/netbanking')
+app.post('/api/netbanking',async(req,res)=>{
+    const user=req.session.user
+    const {bank,account,password,total}=req.body;
+    const newpayment=new Net({
+        user,
+        bank,
+        account,
+        password,
+        total
+    })
+    await newpayment.save().then((data)=>{
+        if(data){
+            res.json({
+                result:true,
+                mode:"Net Banking",
+                data:data
+            })
+        }
+    })
+})
+
 app.post('/api/login',async (req,res)=>{
     console.log(req.body)
     const {email,password}=req.body

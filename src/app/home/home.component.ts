@@ -57,7 +57,9 @@ export class HomeComponent implements OnInit {
    this.route.navigate(['logout'])
     }
   }
-  
+  addproducts(){
+    this.route.navigate(['addproducts'])
+  }
   buyProduct(event){
     event.preventDefault()
     console.log(event)
