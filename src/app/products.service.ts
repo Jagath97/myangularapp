@@ -25,4 +25,7 @@ export class ProductsService {
   getuserorders(){
     return this.http.post<order>('/api/userorders',{})
   }
+  addproducts(name,url,price){
+    return this.http.post<order>('api/addproducts',{name,url,price})
+  }
 }

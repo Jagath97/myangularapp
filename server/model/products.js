@@ -1,6 +1,5 @@
 var mongoose=require('mongoose');
 const productSchema=new mongoose.Schema({
-    _id:String,
     name:String,
     url:String,
     price:String

@@ -1,0 +1,14 @@
+<div align="center">
+    <label><b>UPI</b></label>
+    <div class="card">
+    <div class="card-body">
+    <label>Enter your UPI details</label>
+    <form (submit)="orderpayment($event)">
+      <input type="text" class="form-control" placeholder="UPI address" id="upi" required>
+      <div><label>Net Payable Amount:</label><label style="color:red"> Rs.{{total}}</label></div>
+      <input type="submit" class="btn btn-primary" value="Proceed to Pay">
+    </form>
+    
+    </div>
+    </div>
+    </div>

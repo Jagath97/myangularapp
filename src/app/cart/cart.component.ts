@@ -64,8 +64,8 @@ export class CartComponent implements OnInit {
     console.log(this.method)
   }
   payment(){
-    const route=this.method
-    this.route.navigate([route])
+    //const route=this.method
+    this.route.navigate(['paymentsui'])
   }
   home(){
     this.route.navigate([''])

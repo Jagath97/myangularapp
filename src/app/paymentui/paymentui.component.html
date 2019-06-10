@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-sm  sticky-top">
+  <div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+     <a class="nav-link" routerLink=""><h4>E-Shop</h4></a>  
+  </div>
+  </div>
+  </nav>
+
+<div class="">
+    <label><b>Choose Payment Method</b></label>
+<div class="row">
+<div class="col-sm-2">
+
+    
+        <ul class="list-group" id="paymentlist" >
+            <li id="paytm" [ngClass]="paytm ?'list-active' :'list-group-item'" (click)="value('paytm')">Paytm</li>
+            <li id="paytm" [ngClass]="paypal ?'list-active':'list-group-item'" (click)="value('paypal')">PayPal</li>
+            <li id="paytm" [ngClass]="card ?'list-active':'list-group-item'" (click)="value('card')">Credit/Debit Card</li>
+            <li id="paytm" [ngClass]="upi ?'list-active':'list-group-item'" (click)="value('upi')">UPI</li>
+            <li id="paytm" [ngClass]="net ?'list-active':'list-group-item'" (click)="value('net')">Net Banking</li>
+          </ul>
+ 
+
+</div>
+<div class="col-sm-6" *ngIf="paytm">
+    <app-paytm></app-paytm>
+</div>
+<div class="col-sm-6" *ngIf="paypal">
+    <app-paypal></app-paypal>
+</div>
+<div class="col-sm-6" *ngIf="card">
+    <app-card></app-card>
+</div>
+<div class="col-sm-6" *ngIf="upi">
+    <app-upi></app-upi>
+</div>
+<div class="col-sm-6" *ngIf="net">
+    <app-netbanking></app-netbanking>
+</div>
+</div>
+
+</div>
+

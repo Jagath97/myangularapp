@@ -23,6 +23,10 @@ import { PlaceorderGuard } from './placeorder.guard';
 import { CardComponent } from './card/card.component';
 import { PaypalComponent } from './paypal/paypal.component';
 import { AllordersComponent } from './allorders/allorders.component';
+import { AddproductsComponent } from './addproducts/addproducts.component';
+import { PaymentuiComponent } from './paymentui/paymentui.component';
+import { NetbankingComponent } from './netbanking/netbanking.component';
+import { UpiComponent } from './upi/upi.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +40,10 @@ import { AllordersComponent } from './allorders/allorders.component';
     CardComponent,
     PaypalComponent,
     AllordersComponent,
+    AddproductsComponent,
+    PaymentuiComponent,
+    NetbankingComponent,
+    UpiComponent,
   ],
   imports: [
     BrowserModule,
@@ -83,6 +91,15 @@ import { AllordersComponent } from './allorders/allorders.component';
     {
       path:'paypal',
       component:PaypalComponent,
+      canActivate:[PaymentGuard]
+    },
+    {
+      path:'addproducts',
+      component:AddproductsComponent
+    },
+    {
+      path:'paymentsui',
+      component:PaymentuiComponent,
       canActivate:[PaymentGuard]
     },
     {

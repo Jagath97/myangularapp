@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-sm  sticky-top">
+  <div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+     <a class="nav-link" routerLink=""><h4>E-Shop</h4></a>  
+  </div>
+  </div>
+  </nav>
+
+<div align="center">
+<label><b>Add Products</b></label>
+<div class="card">
+<div class="card-body">
+<form (submit)="add($event)">
+  <input type="text" class="form-control" placeholder="Product Name" id="name" required>
+  <input type="url" class="form-control" placeholder="Product Image Url" id="url" required>
+  <input type="text" class="form-control" placeholder="Product Price" id="price" required>
+  <input type="submit" class="btn btn-primary">
+  <div><a routerLink="">Go Back</a></div>
+</form>
+
+</div>
+</div>
+</div>

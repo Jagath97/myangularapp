@@ -28,17 +28,8 @@
         <tr><td><button class="btn btn-primary" (click)="clear()">Clear Cart</button></td></tr>
         </table>
         <hr/>
-        <div *ngIf="enable" style="padding-top: 10px">
-          <label>Select Payment Option</label>
-          <select class="form-control" (change)="paymentmethod($event)">
-          <option value="none">None</option>
-          <option value="paytm">Paytm</option>
-          <option value="paypal">PayPal</option>
-          <option value="card">Credit/Debit Card</option>
-        </select>
-        </div>
         <div>
-        <table><tr><td *ngIf="enable"><input type="submit"  *ngIf="proceed" value="Proceed to Payment" (click)="payment()"class="btn btn-primary"/></td>
+        <table><tr><td *ngIf="enable"><input type="submit"   value="Proceed to Payment" (click)="payment()"class="btn btn-primary"/></td>
         <td><button  (click)="home()" class="btn btn-primary">Go Back</button></td></tr></table>
       </div>
       </div>

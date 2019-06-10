@@ -1,0 +1,19 @@
+<div align="center">
+    <label><b>Net Banking</b></label>
+    <div class="card">
+    <div class="card-body">
+    <label>Enter your Net Banking details</label>
+          <select class="form-control" (change)="bank($event)">
+          <option *ngFor="let x of banks" value="{{x.name}}">{{x.name}}</option>
+        </select>
+    <form *ngIf="proceed" (submit)="orderpayment($event)">
+      <label><b style="padding-top: 5px">{{method}}</b></label>
+      <input type="text" class="form-control" placeholder="Username" id="user" required>
+      <input type="password" class="form-control" placeholder="Password" id="password" required>
+      <div><label>Net Payable Amount:</label><label style="color:red"> Rs.{{total}}</label></div>
+      <input type="submit" class="btn btn-primary" value="Login to Pay">
+    </form>
+    
+    </div>
+    </div>
+    </div>
