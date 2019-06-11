@@ -1,0 +1,14 @@
+Different Payment Methods Available In the Market:
+
+1.PayPal:
+Using Paypal-rest-sdk we can integrate paypal payment in the application.
+Installing paypal-rest-sdk and use the dependency to work with it.
+
+2.Paytm :
+Using Paytm-Payments node js API to integrate paytm payment in the application  
+
+3.Credit/Debit Card:
+Using Stripe Payment API to integrate card payment in the application
+
+4.Google Pay UPI:
+Using Google Pay web API we can integrate google UPI payment in the application 
